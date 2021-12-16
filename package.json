@@ -1,0 +1,81 @@
+{
+  "name": "videaux-backend",
+  "version": "1.0.0",
+  "description": "Final project for Skylab bootcamp Videaux",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "16.13.0"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js -q",
+    "ts": "tsc --watch",
+    "test": "jest --testPathIgnorePatterns /dist /server/routes/",
+    "test-dev": "jest --watchAll --collect-coverage",
+    "supertest": "jest --testPathPattern --runInBand /server/routes/",
+    "build": "tsc",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkylabCoders/Adrian_Back-Final-Project-202109.git"
+  },
+  "author": "Adrian Paoletti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkylabCoders/Adrian_Back-Final-Project-202109/issues"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist",
+      "/node_modules"
+    ],
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    }
+  },
+  "homepage": "https://github.com/SkylabCoders/Adrian_Back-Final-Project-202109#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/types": "^7.16.0",
+    "@types/node": "^16.11.9",
+    "babel-jest": "^27.3.1",
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.2",
+    "ci": "^2.1.1",
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "eslint-config-airbnb-typescript": "^16.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.8",
+    "firebase": "^9.5.0",
+    "firebase-admin": "^10.0.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.0",
+    "jest": "^27.3.1",
+    "lint-staged": "^12.1.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
